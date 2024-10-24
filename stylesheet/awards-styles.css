@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    background-image: url('/BlurBg_image/blur_background3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #000;
+    padding: 10px 0;
+    display: grid;
+    grid-template-areas: "nav auction roblox-logo";
+    grid-template-columns: max-content auto max-content;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    gap: .5rem;
+    border-bottom: 2px solid #333;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#auction {
+    grid-area: auction;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#auction>img {
+    width: 100%;
+    max-width: 500px;
+}
+
+#roblox-logo {
+    grid-area: roblox-logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#roblox-logo>img {
+    width: 100%;
+    max-width: 75px;
+    margin: .5rem;
+}
+
+#bid-battles {
+    width: 100%;
+    max-width: 125px;
+    cursor: pointer;
+    margin: .5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+#bid-battles:hover {
+    box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 45px #39ff14;
+}
+
+#sidebar-btn {
+    display: none;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #534f4f;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    max-width: fit-content;
+    padding: 1rem;
+    list-style-type: none;
+    z-index: 999;
+    transition: left .3s ease;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar li>a>img {
+    width: 100%;
+    transition: transform .2s ease;
+}
+
+.sidebar li:hover>a>img {
+    transform: scale(1.2);
+}
+
+#sidebar-btn:checked+label~.sidebar {
+    left: 0;
+}
+
+.p1, .p2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    line-height: 1.6;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+    margin: auto;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 750px;
+    background: linear-gradient(to right, blue, red);
+    list-style-type: none;
+}
+
+.wrapper li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+.wrapper li>img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 70%;
+    width: 0;
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, .1);
+    left: 100%;
+    right: 0;
+    z-index: 1;
+    transition: .2s ease;
+    border-radius: 5px;
+}
+
+.overlay>p {
+    color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.wrapper li:hover>.overlay {
+    width: 100%;
+    left: 15px;
+}
+
+.wrapper li:hover>.overlay>p {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .p1, .p2 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

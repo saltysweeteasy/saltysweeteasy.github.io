@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    background-image: url('/BlurBg_image/blur_background3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #000;
+    padding: 10px 0;
+    display: grid;
+    grid-template-areas: "nav auction roblox-logo";
+    grid-template-columns: max-content auto max-content;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    gap: .5rem;
+    border-bottom: 2px solid #333;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#auction {
+    grid-area: auction;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#auction>img {
+    width: 100%;
+    max-width: 500px;
+}
+
+#roblox-logo {
+    grid-area: roblox-logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#roblox-logo>img {
+    width: 100%;
+    max-width: 75px;
+    margin: .5rem;
+}
+
+#bid-battles {
+    width: 100%;
+    max-width: 125px;
+    cursor: pointer;
+    margin: .5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+#bid-battles:hover {
+    box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 45px #39ff14;
+}
+
+#sidebar-btn {
+    display: none;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #534f4f;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    max-width: fit-content;
+    padding: 1rem;
+    list-style-type: none;
+    z-index: 999;
+    transition: left .3s ease;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar li>a>img {
+    width: 100%;
+    transition: transform .2s ease;
+}
+
+.sidebar li:hover>a>img {
+    transform: scale(1.2);
+}
+
+#sidebar-btn:checked+label~.sidebar {
+    left: 0;
+}
+
+main {
+    padding: 120px 20px 20px;
+    text-align: center;
+}
+
+article {
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 3em;
+}
+
+h5 {
+    font-size: 3em;
+}
+
+.p1, .p2, .p3, .p4, .p5 {
+    background-color: #c5751a;
+    color: #fcfcfc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+ul li img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+ul li img:hover {
+    transform: scale(1.05);
+}
+
+.Personal_Storage,
+.Warehouse_Storage,
+.Npc_Sell,
+.Player_Trade,
+.Base_Decorate {
+    margin: 20px auto;
+    padding: 15px;
+}
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5 {
+    margin-top: 20px;
+}
+
+.BidBattles_logo img:hover {
+    box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 45px #39ff14;
+}

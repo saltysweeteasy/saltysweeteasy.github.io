@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 10px 0;
+    display: grid;
+    grid-template-areas: "nav title roblox-logo";
+    grid-template-columns: min-content auto max-content;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    border-bottom: 2px solid #333;
+}
+
+nav {
+    grid-area: nav;
+}
+
+#roblox-logo {
+    grid-area: roblox-logo;
+    width: 64px;
+    margin: .5rem;
+}
+
+#title {
+    margin: auto 0;
+    grid-area: title;
+    text-align: center;
+}
+
+#bid-battles {
+    max-width: 100px;
+    margin: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+#bid-battles:hover {
+    box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 45px #39ff14;
+}
+
+#sidebar-btn {
+    display: none;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #332e2e;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    max-width: fit-content;
+    padding: 1rem;
+    list-style-type: none;
+    z-index: 999;
+    transition: left .3s ease;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar li>a>img {
+    width: 100%;
+    transition: transform .2s ease;
+}
+
+.sidebar li:hover>a>img {
+    transform: scale(1.2);
+}
+
+.sidebar li>a {
+    color: white;
+}
+
+#sidebar-btn:checked+label~.sidebar {
+    left: 0;
+}
+
+main {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 120px;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+h2 {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border: 2px solid #0056b3;
+}
+
+h3 {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border: 2px solid #b30000;
+}
+
+h4 {
+    background-color: #00FF00;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border: 2px solid #009900;
+}
+
+h5 {
+    background-color: #e9ecef;
+    color: #000;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.p1 {
+    color: #ccc;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #007BFF;
+    border: 2px solid #0056b3;
+}
+
+.p2 {
+    color: #ccc;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #FF0000;
+    border: 2px solid #b30000;
+}
+
+.p3 {
+    color: #ccc;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #00FF00;
+    border: 2px solid #009900;
+}
+
+.images {
+    text-align: center;
+    margin: 80px 0;
+    white-space: nowrap;
+}
+
+.images li {
+    display: inline-block;
+    width: 40%;
+    margin: 20px 5%;
+    list-style-type: none;
+}
+
+.images li img {
+    max-width: 100%;
+}
+
+.join {
+    background-color: #e9ecef;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.join input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.join input[type="email"]:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.copyright {
+    margin: 0;
+}

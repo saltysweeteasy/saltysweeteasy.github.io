@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    background-image: url('/BlurBg_image/blur_background3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #000;
+    padding: 10px 0;
+    display: grid;
+    grid-template-areas: "nav auction roblox-logo";
+    grid-template-columns: max-content auto max-content;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    gap: .5rem;
+    border-bottom: 2px solid #333;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#auction {
+    grid-area: auction;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#auction>img {
+    width: 100%;
+    max-width: 500px;
+}
+
+#roblox-logo {
+    grid-area: roblox-logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#roblox-logo>img {
+    width: 100%;
+    max-width: 75px;
+    margin: .5rem;
+}
+
+#bid-battles {
+    width: 100%;
+    max-width: 125px;
+    cursor: pointer;
+    margin: .5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+#bid-battles:hover {
+    box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 45px #39ff14;
+}
+
+#sidebar-btn {
+    display: none;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #534f4f;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    max-width: fit-content;
+    padding: 1rem;
+    list-style-type: none;
+    z-index: 999;
+    transition: left .3s ease;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar li>a>img {
+    width: 100%;
+    transition: transform .2s ease;
+}
+
+.sidebar li:hover>a>img {
+    transform: scale(1.2);
+}
+
+#sidebar-btn:checked+label~.sidebar {
+    left: 0;
+}
+
+main h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 80px; 
+    padding: 10px;
+    z-index: 10; 
+    position: relative;
+    background-color: rgb(156, 156, 34);
+}
+
+.p1 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    background-color: rgb(116, 116, 45);
+}
+
+main article {
+    padding: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "vip inventory carry teleport repairs"
+    "vip shop lucky speedy collision";
+    gap: 30px;
+    background-color: rgb(41, 41, 117);
+    padding: 1rem;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.container div>img {
+    border-radius: 12.5px;
+    width: 100%;
+}
+
+.item-1 {
+    grid-area: vip;
+}
+
+.item-2 {
+    grid-area: inventory;
+}
+
+.item-3 {
+    grid-area: carry;
+}
+
+.item-4 {
+    grid-area: teleport;
+}
+
+.item-5 {
+    grid-area: repairs;
+}
+
+.item-6 {
+    grid-area: shop;
+}
+
+.item-7 {
+    grid-area: lucky;
+}
+
+.item-8 {
+    grid-area: speedy;
+}
+
+.item-9 {
+    grid-area: collision;
+}
+
+.Images img:hover {
+    transform: scale(1.05);
+}
+
+.item-1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 100px #dbdf14, 0 0 30px #dbdf14, 0 0 45px #dbdf14;
+}
+
+.item-2 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 100px #c2c963, 0 0 30px #c2c963, 0 0 45px #c2c963;
+}
+
+.item-3 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 100px #9c5ab1, 0 0 30px #9c5ab1, 0 0 45px #9c5ab1;
+}
+
+.item-4 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 100px #52c7db, 0 0 30px #52c7db, 0 0 45px #52c7db;
+}
+
+.item-5 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #9fa096, 0 0 30px #9fa096, 0 0 45px #9fa096;
+}
+
+.item-6 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #dd6bb7, 0 0 30px #dd6bb7, 0 0 45px #dd6bb7;
+}
+
+.item-7 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #2ad65d, 0 0 30px #2ad65d, 0 0 45px #2ad65d;
+}
+
+.item-8 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #df922f, 0 0 30px #df922f, 0 0 45px #df922f;
+}
+
+.item-9 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #b63f3b, 0 0 30px #b63f3b, 0 0 45px #b63f3b;
+}
+
+.p2 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(116, 116, 45);
+}

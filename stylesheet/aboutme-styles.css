@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    background-image: url('/BlurBg_image/blur_background3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+header {
+    background-color: #000;
+    padding: 10px 0;
+    display: grid;
+    grid-template-areas: "nav auction roblox-logo";
+    grid-template-columns: max-content auto max-content;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    gap: .5rem;
+    border-bottom: 2px solid #333;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#auction {
+    grid-area: auction;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#auction>img {
+    width: 100%;
+    max-width: 500px;
+}
+
+#roblox-logo {
+    grid-area: roblox-logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#roblox-logo>img {
+    width: 100%;
+    max-width: 75px;
+    margin: .5rem;
+}
+
+#bid-battles {
+    width: 100%;
+    max-width: 125px;
+    cursor: pointer;
+    margin: .5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+#bid-battles:hover {
+    box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 45px #39ff14;
+}
+
+#sidebar-btn {
+    display: none;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #534f4f;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    max-width: fit-content;
+    padding: 1rem;
+    list-style-type: none;
+    z-index: 999;
+    transition: left .3s ease;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar li>a>img {
+    width: 100%;
+    transition: transform .2s ease;
+}
+
+.sidebar li:hover>a>img {
+    transform: scale(1.2);
+}
+
+#sidebar-btn:checked+label~.sidebar {
+    left: 0;
+}
+
+
+main {
+    padding: 120px 20px 20px;
+    text-align: center;
+}
+
+
+article {
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: left;
+}
+
+h1 {
+    font-weight: bold;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+
+.p1 {
+    background-color: #c5751a;
+    color: #fcfcfc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+ul li img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+ul li img:hover {
+    transform: scale(1.05);
+}
+
+ul.Andrew li img {
+    max-width: 50%;
+    height: auto;
+}
+
+main h1 {
+    margin-top: 20px;
+}
+
+.BidBattles_logo img:hover {
+    box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 45px #39ff14;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px 0;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 350px;
+}
+
+footer .social-media li {
+    position: relative;
+}
+
+footer .social-media img {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.1);
+}
+
+footer .slider {
+    width: 0;
+    background-color: #fff;
+    transition: width 0.5s ease;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    left: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+footer .slider p {
+    visibility: hidden;
+    margin: 0;
+    padding: 0 20px;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+
+footer .social-media li:hover .slider {
+    width: 250px;
+}
+
+footer .social-media li:hover .slider p {
+    visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+    footer .social-media {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    footer .social-media li {
+        width: auto;
+        text-align: left;
+        margin-left: -175px;
+    }
+
+    footer .social-media img {
+        margin-bottom: 10px;
+    }
+
+    footer .slider {
+        left: 50px;
+        width: 0;
+    }
+
+    footer .social-media li:hover .slider,
+    footer .social-media li:active .slider {
+        width: 250px;
+    }
+
+    footer .slider p {
+        font-size: 14px;
+        visibility: hidden;
+    }
+
+    footer .social-media li:hover .slider p,
+    footer .social-media li:active .slider p {
+        visibility: visible;
+    }
+}
+
+footer .social-media li:hover .slider {
+    width: 250px;
+}
+
+footer .slider {
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+
